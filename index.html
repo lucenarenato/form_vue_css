@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form Submit VueJS</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  
+</head>
+
+<body background="images/fundo-formulario.jpg">
+
+  <script src="js/vue.js"></script> 
+  <div class="container">
+  	<div class="content">
+	  	<br>
+	  	<div id="men"> 
+	  		<ul>
+			    <li>
+			         <h2>Contato</h2>		         
+			    </li>		    
+			</ul>
+	      
+		      {{log}}
+		      <form class="contact_form" v-on:submit="sub" action="#" method="post" name="contact_form">
+
+		      	<p><input type="text" v-model="nome" placeholder="Nome" required/></p>
+		        <p><input type="text" v-model="telefone" placeholder="62988888888" required/></p>
+		        <p><input type="email" name="email" v-model="email" placeholder="exemplo@teste.com" required/></p>
+		        <!-- <p><button type="submit">Salvar</button></p> -->
+		        <p><input type="submit" value="Cadastrar"/></p>
+		        <!-- <p><span class="required_notification">* Denota campo obrigatório</span></p>   -->
+		        <p class="link">
+	            	Ainda não tem conta?
+	            	<a href="#paracadastro">Cadastre-se</a>
+	            </p>
+		          
+		      </form>
+
+		      
+		  </div>
+	  </div> 
+
+  </div> 
+
+    <script  src="js/index.js"></script>
+
+</body>
+
+</html>
