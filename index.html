@@ -8,6 +8,8 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css'>
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+
   
 </head>
 
@@ -28,16 +30,16 @@
 				</ul>
 		      
 			      {{log}}
-			      <form class="contact_form" v-on:submit="sub" action="#" id="signup-form" method="post" name="contact_form">
+			      <form class="contact_form" v-on:submit="sub" action="teste.html" id="signup-form" method="post" name="contact_form">
 			      	<label class="label">Name</label>
 			      	<p><input type="text" v-model="nome" class="input" name="name" placeholder="Nome" required/></p>
 			      	<label class="label">Telefone</label>
-			        <p><input type="text" v-model="telefone" class="input" name="fone" placeholder="62988888888" required/></p>
+			        <p><input type="text" v-model="telefone" class="input" name="telefone" placeholder="62988888888" required/></p>
 			        <label class="label">Email</label>
 			        <p><input type="email" name="email" v-model="email" class="input" name="email" placeholder="exemplo@teste.com" required/></p>
 			        <!-- <p><button type="submit">Salvar</button></p> -->
 			         <div class="field has-text-right">
-				        <button type="submit" class="button is-danger">Salvar</button>
+				        <button type="submit" class="button is-danger" v-bind:disabled="!isValid">Salvar</button>
 				      </div>
 			       <!--  <p><input type="submit" class="button is-danger" value="Cadastrar"/></p> -->
 			        
