@@ -430,3 +430,7 @@ input[type="submit"]:hover{
     transform: translateX(-20px);
   }
 }
+footer { 
+  display: block;
+  text-align: center;
+}
